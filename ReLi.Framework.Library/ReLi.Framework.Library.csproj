@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F9E59EEE-12EF-4E13-90DD-47DA6D0C42D2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ReLi.Framework.Library</RootNamespace>
+    <AssemblyName>ReLi.Framework.Library</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\Runtime\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>..\..\Runtime\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReLi Surescripts %28Debug%29|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\ReLi Surescripts %28Debug%29\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Server Debugger|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Server Debugger\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Client Debugger|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Client Debugger\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Patient Portal|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Patient Portal\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationManager.cs" />
+    <Compile Include="AsyncHelper.cs" />
+    <Compile Include="BindablePropertyChangedEventArgs.cs" />
+    <Compile Include="BindablePropertyChangingEventArgs.cs" />
+    <Compile Include="BindablePropertyChangingEventHandler.cs" />
+    <Compile Include="BitArrayExtensions.cs" />
+    <Compile Include="Caching\CacheManager.cs" />
+    <Compile Include="Caching\CacheRecord.cs" />
+    <Compile Include="Collections\BeforeItemAddedEventHandler.cs" />
+    <Compile Include="Collections\BeforeItemAddedEventArgs.cs" />
+    <Compile Include="Collections\BeforeItemRemovedEventArgs.cs" />
+    <Compile Include="Collections\BeforeItemRemovedEventHandler.cs" />
+    <Compile Include="Collections\ItemRemovedEventArgs.cs" />
+    <Compile Include="Collections\ItemRemovedEventHandler.cs" />
+    <Compile Include="Collections\ItemAddedEventArgs.cs" />
+    <Compile Include="Collections\ItemAddedEventHandler.cs" />
+    <Compile Include="Collections\ListBase.cs" />
+    <Compile Include="Collections\ObjectListBase.cs" />
+    <Compile Include="Compression\CompressionLib.cs" />
+    <Compile Include="Compression\QuickLZ.cs" />
+    <Compile Include="Configuration\SettingsManager.cs" />
+    <Compile Include="ConversionHelper.cs" />
+    <Compile Include="BindablePropertyChangedEventHandler.cs" />
+    <Compile Include="Diagnostics\LogSettingsChangedHandler.cs" />
+    <Compile Include="Diagnostics\WriteMessageToLogDelegate.cs" />
+    <Compile Include="Diagnostics\MessageTypeRemovedEventArgs.cs" />
+    <Compile Include="Diagnostics\MessageTypeRemovedEventHandler.cs" />
+    <Compile Include="Diagnostics\MessageTypeAddedEventArgs.cs" />
+    <Compile Include="Diagnostics\WriteMessageFailedEventArgs.cs" />
+    <Compile Include="Diagnostics\EmailLog.cs" />
+    <Compile Include="Diagnostics\ErrorMessage.cs" />
+    <Compile Include="Diagnostics\EventLog.cs" />
+    <Compile Include="Diagnostics\FileLog.cs" />
+    <Compile Include="Diagnostics\LogBase.cs" />
+    <Compile Include="Diagnostics\LogBaseCollection.cs" />
+    <Compile Include="Diagnostics\LogManager.cs" />
+    <Compile Include="Diagnostics\MessageBase.cs" />
+    <Compile Include="Diagnostics\MessageType.cs" />
+    <Compile Include="Diagnostics\MessageTypeCollection.cs" />
+    <Compile Include="Diagnostics\MessageTypeAddedEventHandler.cs" />
+    <Compile Include="Diagnostics\SqlMessage.cs" />
+    <Compile Include="Diagnostics\TraceMessage.cs" />
+    <Compile Include="Diagnostics\WriteMessageFailedEventHandler.cs" />
+    <Compile Include="Diagnostics\WriteMessageToLogsDelegate.cs" />
+    <Compile Include="EnumAttribute.cs" />
+    <Compile Include="EnumExtensions.cs" />
+    <Compile Include="EnumHelper.cs" />
+    <Compile Include="ExceptionHelper.cs" />
+    <Compile Include="IBindableObject.cs" />
+    <Compile Include="IO\BinaryReaderExtension.cs" />
+    <Compile Include="IO\BinaryWriterExtension.cs" />
+    <Compile Include="Net\UploadFailedMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Net\UploadFailedMessage.Designer.cs">
+      <DependentUpon>UploadFailedMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Net\UploadDialogSettings.cs" />
+    <Compile Include="Net\ProxySettings.cs" />
+    <Compile Include="ObjectBase.cs" />
+    <Compile Include="IObjectBase.cs" />
+    <Compile Include="FastReflectionManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ITransportableObject.cs" />
+    <Compile Include="RetryHelper.cs" />
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="TransportableDataType.cs" />
+    <Compile Include="TransportableDataTypeHelper.cs" />
+    <Compile Include="TransportableObject.cs" />
+    <Compile Include="Security\Encryption\DESEncryption.cs" />
+    <Compile Include="Security\Encryption\EncryptionBase.cs" />
+    <Compile Include="Security\Encryption\RijndaelEncryption.cs" />
+    <Compile Include="Security\Encryption\TripleDesEncryption.cs" />
+    <Compile Include="Security\Hash\HashBase.cs" />
+    <Compile Include="Security\Hash\SHA1Hash.cs" />
+    <Compile Include="Security\Hash\SHA256Hash.cs" />
+    <Compile Include="Security\Hash\SHA384Hash.cs" />
+    <Compile Include="Security\Hash\SHA512Hash.cs" />
+    <Compile Include="Serialization\SerializedValueTypeHelper.cs" />
+    <Compile Include="Serialization\SerializedValueType.cs" />
+    <Compile Include="Serialization\ICustomSerializer.cs" />
+    <Compile Include="Serialization\SerializedWrapperObject.cs" />
+    <Compile Include="Serialization\SerializedObject.cs" />
+    <Compile Include="Serialization\SerializedObjectCollection.cs" />
+    <Compile Include="Serialization\SerializedTypeInfo.cs" />
+    <Compile Include="Serialization\SerializedValue.cs" />
+    <Compile Include="Serialization\SerializedValueCollection.cs" />
+    <Compile Include="Serialization\SerializedWrapperBase.cs" />
+    <Compile Include="Threading\ITaskList.cs" />
+    <Compile Include="Wcf\WcfChannelFactoryManager.cs" />
+    <Compile Include="Wcf\WcfServiceThrottling.cs" />
+    <Compile Include="Wcf\WcfServiceBehavior.cs" />
+    <Compile Include="Wcf\WcfMetadataEndpoint.cs" />
+    <Compile Include="Wcf\WcfServiceEndpointList.cs" />
+    <Compile Include="Wcf\WcfServiceEndpoint.cs" />
+    <Compile Include="Wcf\WcfServiceHostSettings.cs" />
+    <Compile Include="Wcf\WcfChannelFactory.cs" />
+    <Compile Include="Wcf\WcfChannel.cs" />
+    <Compile Include="Wcf\WcfClientChannelConnectionSettingsList.cs" />
+    <Compile Include="Wcf\WcfClientChannelConnectionSettings.cs" />
+    <Compile Include="Wcf\IWcfBinding.cs" />
+    <Compile Include="Wcf\WcfEndpointAddress.cs" />
+    <Compile Include="Wcf\WcfBasicHttpBinding.cs" />
+    <Compile Include="Wcf\WcfOptionalReliableSession.cs" />
+    <Compile Include="Wcf\WcfReaderQuotas.cs" />
+    <Compile Include="Wcf\WcfNetTcpBinding.cs" />
+    <Compile Include="Wcf\WcfServiceHostSettingsList.cs" />
+    <Compile Include="WebDAV\WebDAVClient.cs" />
+    <Compile Include="WebDAV\WebDAVFileProperties.cs" />
+    <Compile Include="XmlLite\XmlLiteAttribute.cs" />
+    <Compile Include="XmlLite\XmlLiteAttributeCollection.cs" />
+    <Compile Include="XmlLite\XmlLiteDocument.cs" />
+    <Compile Include="XmlLite\XmlLiteElement.cs" />
+    <Compile Include="XmlLite\XmlLiteElementCollection.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Console\ConsoleProcess.cs" />
+    <Compile Include="Console\ConsoleProcessAsynchronousHandle.cs" />
+    <Compile Include="Console\ConsoleProcessResult.cs" />
+    <Compile Include="Console\ConsoleProcessResultInterpreter.cs" />
+    <Compile Include="Console\ConsoleProcessResultType.cs" />
+    <Compile Include="Console\InterpretedConsoleProcessResult.cs" />
+    <Compile Include="DateHelper.cs" />
+    <Compile Include="Diagnostics\CommandLineManager.cs" />
+    <Compile Include="Diagnostics\MessageTypePropertyChangedEventArgs.cs" />
+    <Compile Include="Diagnostics\MessageTypePropertyChangedEventHandler.cs" />
+    <Compile Include="Diagnostics\ProcessManager.cs" />
+    <Compile Include="IO\DirectoryManager.cs" />
+    <Compile Include="IO\Ellipsis.cs" />
+    <Compile Include="IO\FileManager.cs" />
+    <Compile Include="IO\FileShare.cs" />
+    <Compile Include="IO\FileShareList.cs" />
+    <Compile Include="IO\FileToken.cs" />
+    <Compile Include="IO\FileTokenList.cs" />
+    <Compile Include="IO\MappedDrive.cs" />
+    <Compile Include="IO\MappedDriveList.cs" />
+    <Compile Include="IO\PathLabelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IO\PathLabelControl.designer.cs">
+      <DependentUpon>PathLabelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Net\FileDownloadRequestList.cs" />
+    <Compile Include="Net\UploadRequestSession.cs" />
+    <Compile Include="Net\DownloadDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Net\DownloadDialog.Designer.cs">
+      <DependentUpon>DownloadDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Net\DownloadDialogSettings.cs" />
+    <Compile Include="Net\DownloadFailedMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Net\DownloadFailedMessage.Designer.cs">
+      <DependentUpon>DownloadFailedMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Net\DownloadManager.cs" />
+    <Compile Include="Net\DownloadRequest.cs" />
+    <Compile Include="Net\DownloadRequestList.cs" />
+    <Compile Include="Net\DownloadRequestSession.cs" />
+    <Compile Include="Net\DownloadResult.cs" />
+    <Compile Include="Net\DownloadResultList.cs" />
+    <Compile Include="Net\DownloadStats.cs" />
+    <Compile Include="Net\EmptyDownloadRequest.cs" />
+    <Compile Include="Net\EmptyUploadRequest.cs" />
+    <Compile Include="Net\FileDownloadRequest.cs" />
+    <Compile Include="Net\FileUploadRequest.cs" />
+    <Compile Include="Net\FtpDownloadRequest.cs" />
+    <Compile Include="Net\FtpUploadRequest.cs" />
+    <Compile Include="Net\HttpDownloadRequest.cs" />
+    <Compile Include="Net\IDownloadStats.cs" />
+    <Compile Include="Net\IUploadStats.cs" />
+    <Compile Include="Net\Mail\MailMessage.cs" />
+    <Compile Include="Net\Mail\SmtpClient.cs" />
+    <Compile Include="Net\TransferSizeType.cs" />
+    <Compile Include="Net\TransferTimeType.cs" />
+    <Compile Include="Net\UploadDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Net\UploadDialog.Designer.cs">
+      <DependentUpon>UploadDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Net\UploadManager.cs" />
+    <Compile Include="Net\UploadRequest.cs" />
+    <Compile Include="Net\UploadRequestList.cs" />
+    <Compile Include="Net\UploadResult.cs" />
+    <Compile Include="Net\UploadResultList.cs" />
+    <Compile Include="Net\UploadStats.cs" />
+    <Compile Include="Net\WebServices\WebServiceConnectionProperties.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Remoting\Channels\HttpRemoteChannel.cs" />
+    <Compile Include="Remoting\Channels\RemoteChannel.cs" />
+    <Compile Include="Remoting\Channels\TcpRemoteChannel.cs" />
+    <Compile Include="Remoting\RemoteClient.cs" />
+    <Compile Include="Remoting\RemoteComponent.cs" />
+    <Compile Include="Remoting\RemoteProxy.cs" />
+    <Compile Include="Remoting\RemoteServer.cs" />
+    <Compile Include="Remoting\RemoteServerStatusType.cs" />
+    <Compile Include="Security\AccountToken.cs" />
+    <Compile Include="Security\AccountTokenList.cs" />
+    <Compile Include="ComputerProcessorArchitectureType.cs" />
+    <Compile Include="Security\ComputerToken.cs" />
+    <Compile Include="Security\ComputerTokenList.cs" />
+    <Compile Include="Security\Credentials.cs" />
+    <Compile Include="Security\Encryption\Rijndael128Encryption.cs" />
+    <Compile Include="Security\VersionToken.cs" />
+    <Compile Include="Serialization\BinaryFormatterKeyList.cs" />
+    <Compile Include="Serialization\BinaryFormatterKeyManager.cs" />
+    <Compile Include="Serialization\IFormatter.cs" />
+    <Compile Include="Serialization\BinaryFormatter.cs" />
+    <Compile Include="Serialization\FormatterManager.cs" />
+    <Compile Include="Serialization\XmlFormatter.cs" />
+    <Compile Include="Services\ServiceManager.cs" />
+    <Compile Include="Threading\ITask.cs" />
+    <Compile Include="Threading\ITaskResult.cs" />
+    <Compile Include="Threading\ITaskStats.cs" />
+    <Compile Include="Threading\Job.cs" />
+    <Compile Include="Threading\JobResult.cs" />
+    <Compile Include="Threading\JobResultType.cs" />
+    <Compile Include="Threading\JobStatusType.cs" />
+    <Compile Include="Threading\JobTicket.cs" />
+    <Compile Include="Threading\TaskActionType.cs" />
+    <Compile Include="Threading\TaskResult.cs" />
+    <Compile Include="Threading\TaskResultList.cs" />
+    <Compile Include="Threading\TaskResultType.cs" />
+    <Compile Include="Threading\TaskStats.cs" />
+    <Compile Include="WinAPI\User32.cs" />
+    <Compile Include="XmlLite\IXmlConvertible.cs" />
+    <Compile Include="XmlLite\XmlLiteExpression.cs" />
+    <Compile Include="XmlLite\XmlLiteReader.cs" />
+    <Compile Include="XmlLite\XmlLiteWriter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Net\UploadFailedMessage.resx">
+      <DependentUpon>UploadFailedMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Net\DownloadDialog.resx">
+      <DependentUpon>DownloadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Net\DownloadFailedMessage.resx">
+      <DependentUpon>DownloadFailedMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Net\UploadDialog.resx">
+      <DependentUpon>UploadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resIconNetwork.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
